@@ -1,0 +1,205 @@
+ul {
+   list-style-type: none;
+   margin: 0;
+   padding: 0;
+   overflow: hidden;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   
+   }
+
+
+ li a {
+  display: block;
+   color: white;
+   text-align: center;
+   padding: 16px;
+   text-decoration: none;
+   font-family: Georgia, 'Times New Roman', Times, serif;
+   }
+ 
+  li a:hover {
+   background-color: wheat;
+   }
+ 
+   .menu-head {
+     height: 80vh;
+
+    background-image:
+        linear-gradient(rgba(0,0,0,0.6),
+        rgba(0,0,0,0.6)),
+        url("./Images/Pic\ 4.jpeg");
+
+    background-size: cover;
+
+    background-position: right;
+
+    background-repeat: no-repeat;
+
+    display: flex;
+
+    flex-direction: column;
+
+    color: white;
+
+    margin-top: -30px;
+   }
+
+ nav {
+     display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 25px 8%;
+ }
+
+.hall h2{
+    color: white;
+    font-size: 28px;
+    font-family: Georgia, 'Times New Roman', Times, serif; 
+
+ }
+ .hall span {
+    color: #D4AF37;
+    font-size: 16px;
+    display: block;
+    letter-spacing: 2px;
+ }
+
+ h1 {
+     font-size: 50px;
+     margin-left: 120px;
+ }
+ p{
+    margin-left: 115px;
+    font-size: 15px;
+ }
+ .category-bar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+     background: #161616;
+    border: 1px solid #2b2b2b;
+    border-radius: 15px;
+
+    padding: 25px;
+ }
+
+ .category {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    color: white;
+    cursor: pointer;
+ }
+
+ .Category-active {
+    color: white;
+ }
+
+ .category:hover{
+    background: #D4AF37;
+    color: #111;
+ }
+
+ .category:hover i{
+    color: #111;
+ }
+
+ #hall {
+    text-align: center;
+ }
+ 
+ .dish-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+ .price{
+    color: #D4AF37;
+    font-size: 22px;
+    font-weight: bold;
+ }
+
+ .menu-house{
+    display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+ }
+
+ .menu-card{
+   width: 360px;
+
+    background:#fff;
+
+    border-radius:20px;
+
+    overflow:hidden;
+ }
+ .menu-card img{
+   width:100%;
+
+    height:270px;
+
+    object-fit: cover;
+ }
+
+ .menu-card {
+    padding-left: 0px;
+  padding-top: 0px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  background-color: #111;
+ }
+
+ .ball {
+    margin-left: 5px;
+    
+ }
+
+ .menu-section{
+    background: rgb(12, 11, 11);
+ }
+ 
+ #hall,#dall,#rall,#mall,#sall {
+    color: #D4AF37;
+    text-align: center;
+ }
+
+ .menu-bar {
+    background-color: black;
+ }
+
+ .card-content {
+    color: white;
+ }
+
+ .footer-head {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 30px;
+    color: white;
+ }
+
+ .foot {
+     flex:1;
+     text-align:center;
+     padding:0 30px;
+     border-right:1px solid #d9d9d9;
+ }
+
+ .footer {
+    border: 2px solid #D4AF37;
+    border-radius: 30px;
+    color: #2b2b2b;
+    margin-top: 60px;
+
+ }
+
+ h3 {
+    color: #D4AF37;
+ }
