@@ -130,17 +130,6 @@
   margin-left: 0px;
    }
 
- .about-reez {
-  position: relative;
-  /**margin-left: 50px;**/
-   }
-
- .chef {
-  position: absolute;
- /** right: -40px;
-  bottom: -40px;**/
-   }
-
  .bash {
   border: 2px solid darkgreen;
   padding: 10px;
@@ -230,12 +219,12 @@
     border-top-right-radius: 2px;
     position: relative;
     z-index:2;
-    padding:100px 10%;
-    margin-top: 10%;
+    padding:50px 10%;
+    margin-top: 50px;
     
  }
  .hell{
-  margin-top: -90px;
+  margin-top: 0px;
   margin-left: 0px;
   
  }
@@ -254,6 +243,8 @@
  #btn4 {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  gap: 30px;
 
  
  }
@@ -276,5 +267,24 @@
         max-width: 350px;
     }
 
+}
+@media (max-width: 768px) {
+
+    .pit {
+        padding: 40px 20px;
+        margin-top: 40px;
+    }
+
+    .hell {
+        margin: 0;
+        text-align: center;
+    }
+
+    #btn4 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+    }
 }
  
