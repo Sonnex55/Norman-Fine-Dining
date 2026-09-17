@@ -1,6 +1,21 @@
- body {
+ 
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body {
     background: black;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
   }
+
  ul {
    list-style-type: none;
    margin: 0;
@@ -9,6 +24,7 @@
    display: flex;
    justify-content: center;
    align-items: center;
+   gap: clamp(2px,1vw,15px);
    
    }
 
@@ -31,9 +47,10 @@
      justify-content: space-between;
      align-items: center;
      background-color: black;
-     padding: 5px 5%;
+     font-size: clamp(10px,4vw,15px);
  }
-
+ 
+ 
  h2,span {
     color: white;
  }
@@ -42,6 +59,7 @@
     color: white;
     font-size: 28px;
     font-family: Georgia, 'Times New Roman', Times, serif; 
+    margin-left: 5%;
 
  }
  .hall span {
@@ -56,11 +74,12 @@
     color: white;
     position: relative;
     z-index: 2;
+    margin-top: 60px;
     
  }
 
- .pur {
-    margin-top: 20px;
+ .purt {
+    margin-top: 50px;
  }
 
  .menu-head {
@@ -74,31 +93,63 @@
         ),
         url("./Images/Our\ Gallery\ Backg.png");
       position: relative;
-      background-size: contain;
+      background-size: cover;
       height: 70vh;
       background-position: center;
       border-bottom: #D4AF37;
+      
 
  }
  
- #pure {
-    font-size: 70px;
+ @media (max-width: 600px) {
+   .menu-head {
+      background-repeat: no-repeat;
+      height: 70vh;
+   }
+
+   .hall {
+      display: none;
+   }
  }
+ #pure {
+    font-size: clamp(40px,6vw,70px);
+ }
+
+ 
+ @media (max-width: 768px) {
+
+    nav {
+        padding: 5px 15px;
+    }
+
+    ul {
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    li a {
+        padding: 8px 6px;
+        font-size: clamp(10px, 2.5vw, 14px);
+    }
+}
+
+
  .category{
     display: inline-block;
     justify-content: space-between;
     align-items: center;
 
-    padding: 12px 25px;
-
+    
     border: 1px solid #D4AF37;
 
     border-radius: 30px;
-
+    box-sizing: border-box;
     color: white;
-
+    white-space: nowrap;
     text-decoration: none;
-
+    padding: 10px clamp(12px, 2vw, 20px);
+    font-size: clamp(12px, 1.5vw, 17px);
     transition: .3s;
     width: max-content;
     margin-bottom: 10px;
@@ -108,11 +159,20 @@
 
  .category-bar {
     display: flex;
-    justify-content: space-evenly;
-    /**gap: 120px;**/
+    justify-content: center;
     background: black;
+    width: 100%;
+    padding: 15px 10px;
+    flex-wrap: wrap;
+
     
  }
+@media (max-width: 425px) {
+    .category {
+        font-size: 12px;
+    }
+
+}
 
  span {
     color: white;
@@ -122,7 +182,8 @@
     position: relative;
     overflow: hidden;
     border-radius: 25px;
-    width: 400px;
+    width: 95%;
+    max-width: 380px;
     border: 1px solid #D4AF37;
  }
 
@@ -131,6 +192,7 @@
     object-fit: cover;
     height: 300px;
     display: block;
+    justify-content: center;
  }
  
  .gallery-sub {
@@ -142,35 +204,36 @@
  }
  
  .gallery-row {
+   
     display: flex;
     justify-content: space-evenly;
+    gap: clamp(3px,1vw,10px);
     align-items: center;
     background-color: black;
     margin-top: 50px;
-
+    padding: 15px;
  }
  #bod {
-   width: 33%;
+   width: 50%;
     padding: 35px;
     color: white;
  }
+ 
 
  .gallery-cat {
   display: flex;
     border: 1px solid #9a7225;
     border-radius: 6px;
     overflow: hidden;
-    margin-top: 40px;
+    margin-top: 38px;
     height: 280px;
-    width: 95%;
-    align-items: center;
-    margin-left: 30px;
-   
-   
+    width: 93%;
+    margin-left: 3.5%;
  }
 
  #hat {
    width: 65%;
+   height: 90vh;
    
  }
 
@@ -184,9 +247,17 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 100px;
+    gap: 50px;
+    padding: 20px;
+  
     
 
+ }
+
+ @media (max-width: 520px){
+   #how{
+        flex-wrap: wrap;
+   }
  }
 
  .gallery-on {
@@ -196,6 +267,8 @@
     overflow: hidden;
     height: 200px;
     justify-content: space-evenly;
+    
+    
  }
 
  .gallery-on video {
@@ -203,21 +276,21 @@
     height: 180px;
     object-fit: cover;
     display: block;
-   
+    
  }
 
  .gallery-mub {
    color: white;
    font-size: 20px;
  }
-
+/**
  .low {
    display: flex;
     justify-content: space-evenly;
     align-items: center;
-    gap: 100px;
+    gap: 80px;
     
- } 
+ } **/
 
  #w3 {
    
@@ -226,6 +299,12 @@
    color: black;
    background-color: #D4AF37;
    padding: 10PX;
+ }
+
+ @media (max-width: 931px){
+   #w3 {
+      margin-right: 10%;
+   }
  }
 
  #btn1 {
@@ -237,20 +316,93 @@
    margin-top: 25px;
  }
 
+@media(max-width: 950px) {
+   #bod h1 {
+  
+    font-size: clamp(18px,2vw,24px);
+    
+}
+
+ #bod h5 {
+  
+    font-size: clamp(10px,2vw,15px);
+    
+}
+   }
+
+ @media (max-width: 360px){
+   #bod {
+      padding: 20px;
+   }
+ }
+
  .footer {
    display: flex;
    justify-content: space-evenly;
-   gap: 80px;
+   gap: 90px;
    align-items: center;
    border: 1px solid #D4AF37;
    margin-top: 25px;
-   width: 95%;
-   margin-left: 35px;
+   width: 92%;
+   margin-left: 4.2%;
    
  }
 
+ @media (max-width: 1080px){
+   .footer {
+      display: flex;
+      justify-content: space-evenly;
+      gap: 20px;
+      width: 96%;
+      margin-left: 2%;
+      overflow: hidden;
+   }
+
+.bell-icon{
+   font-size: 55px;
+}
+ }
+
+ @media (max-width:  450px){
+   #w2 h1 {
+      font-size: 25px;
+   }
+ }
+
  .feeter {
-   display: flex;
-   justify-content: space-evenly;
+  display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    width: 95%;
+    max-width: 1100px;
+    margin: 40px auto 0;
+    padding: 20px;
+    border: 1px solid #D4AF37;
+    box-sizing: border-box;
+    overflow: hidden;
+    
+ }
+
+ .bon {
    color: white;
+    padding: 0px;
+    justify-content: center;
+ }
+
+ .bon h2{
+   color: #D4AF37;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 15px;
+ }
+
+ @media (max-width: 480px){
+   .bon h3 {
+      font-size: clamp(13px,2vw,20px);
+   }
+ }
+
+ @media (max-width: 400px){
+   .bon h2{
+      font-size: clamp(16px,2vw,22px);
+   }
  }
