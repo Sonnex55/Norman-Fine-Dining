@@ -1,7 +1,22 @@
+ 
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
-    background: #0A0A0A;
+    background: black;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
   }
- ul {
+
+  ul {
    list-style-type: none;
    margin: 0;
    padding: 0;
@@ -9,7 +24,7 @@ body {
    display: flex;
    justify-content: center;
    align-items: center;
-   
+    gap: clamp(2px,1vw,15px);
    }
 
 
@@ -31,7 +46,8 @@ body {
      justify-content: space-between;
      align-items: center;
      background-color: black;
-     padding: 5px 5%;
+     font-size: clamp(10px,4vw,15px);
+    
  }
 
  h2,span {
@@ -40,7 +56,7 @@ body {
 
  .hall h2{
     color: white;
-    font-size: 28px;
+    font-size: 25px;
     font-family: Georgia, 'Times New Roman', Times, serif; 
 
  }
@@ -56,14 +72,17 @@ body {
     color: white;
     position: relative;
     z-index: 2;
-    margin-left: 70px;
     padding: 50px 8%;
     
 
     
  }
 
- 
+ @media (max-width: 700px){
+    .hall {
+        display: none;
+    }
+ }
 
  #pur {
     margin-top: 20px;
@@ -88,10 +107,11 @@ body {
         ),
         url("./Images/about\ page\ backg.png");
       position: relative;
-      background-size: contain;
-      height: 80vh;
+      background-size: cover;
+      height: 90vh;
       background-position: center;
       border-bottom: #D4AF37;
+      background-repeat: no-repeat;
 
  }
  
@@ -108,14 +128,14 @@ body {
         rgba(0, 0, 0, 0.1) 75%,
         rgba(0, 0, 0, 0) 100%
  }
-
+ 
  .yat {
     text-align: center;
  }
 
  #burt {
     text-align: center;
-    margin-left: 70px;
+    
  }
 
 .reservation-container {
@@ -137,7 +157,28 @@ body {
     width: 57%;
     padding: 50px 55px;
     background: #111111;
+    
 }
+
+
+ @media (max-width: 768px) {
+
+    nav {
+        padding: 5px 15px;
+    }
+
+    ul {
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    li a {
+        padding: 8px 6px;
+        font-size: clamp(10px, 2.5vw, 14px);
+    }
+}
+
 
 .section-label {
     display: block;
@@ -533,4 +574,16 @@ footer {
         display: none;
     }
 
+}
+
+@media (max-width: 905px){
+    .reservation-image {
+        display: none;
+    }
+}
+
+@media (max-width: 387px) {
+    #burt {
+        margin-top: -15%;
+    }
 }
