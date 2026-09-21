@@ -288,3 +288,27 @@
     }
 }
  
+
+ @media (max-width: 768px) {
+
+    nav {
+        padding: 5px 15px;
+    }
+
+    ul {
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    li a {
+        padding: 8px 6px;
+        font-size: clamp(11px, 2.5vw, 14px);
+    }
+}
+
+@media (max-width: 370px) {
+  .Feat {
+    font-size: clamp(14px,2vw,18px);
+  }
+}
