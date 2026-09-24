@@ -14,6 +14,9 @@ body {
     padding: 0;
     width: 100%;
     overflow-x: hidden;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
   }
 
  ul {
@@ -35,7 +38,6 @@ body {
      text-align: center;
      padding: 16px;
      text-decoration: none;
-     font-family: Georgia, 'Times New Roman', Times, serif;
    }
  
  li a:hover {
@@ -57,8 +59,7 @@ body {
 
  .hall h2{
     color: white;
-    font-size: 28px;
-    font-family: Georgia, 'Times New Roman', Times, serif; 
+    font-size: 28px; 
     margin-left: 5%;
 
  }
@@ -74,7 +75,7 @@ body {
     color: white;
     position: relative;
     z-index: 2;
-    margin-top: 60px;
+    margin-top: 90px;
     
  }
 
@@ -330,9 +331,9 @@ body {
 }
    }
 
- @media (max-width: 360px){
+ @media (max-width: 420px){
    #bod {
-      padding: 20px;
+      padding: 18px;
    }
  }
 
@@ -391,7 +392,6 @@ body {
 
  .bon h2{
    color: #D4AF37;
-    font-family: Georgia, 'Times New Roman', Times, serif;
     margin-bottom: 15px;
  }
 
